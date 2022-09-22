@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
 
  const Navbar = () => {
-    const [nav, setNav] = useState(false)
+    const [nav, setNav] = useState(true)
 
     function handleNav(){
         setNav(!nav)
@@ -17,7 +17,7 @@ import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai'
             <li className='p-4'>Resources</li>
             <li className='p-4'>About</li>
         </ul>
-        <div onClick={handleNav} className='cursor-pointer'>
+        <div onClick={handleNav} className='cursor-pointer sm:hidden lg:hidden'>
             {!nav ? <AiOutlineClose/> :  <AiOutlineMenu/>}
      
         </div>
